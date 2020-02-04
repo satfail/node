@@ -14,7 +14,7 @@ let salarios = [{
     id: 1,
     salario: 1000
 }, {
-    id: 1,
+    id: 2,
     salario: 2000
 }];
 
