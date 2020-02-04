@@ -77,6 +77,7 @@ getSalario(empleados[0]).then(respuesta => {
 
 //Promesas en cadena, retorno otra promesa y voy quedandome con los resolves
 //al final hago un .catch y dependiendo del error, saldrá el reject correspondiente
+
 getEmpleado(10).then(empleado => {
         return getSalario(empleado);
     })
