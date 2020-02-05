@@ -9,10 +9,31 @@
 
 
 //Con destructuracion para usar funcion directamente
-const { crearArchivo } = require('./multiplicar/multiplicar');
+const { crearArchivo, listarTabla } = require('./multiplicar/multiplicar');
+const argv = require('./config/yargs').argv;
+
+let comando = argv._[0];
+
+switch (comando) {
+
+    case 'listar':
+        listarTabla(argv.base, argv.limite);
+        break;
+
+    case 'crear':
+
+        crearArchivo(argv.base, argv.limite)
+            .then(archivo => console.log(`Archvo creado : ${ archivo }`))
+            .catch(e => console.log(e));
+        break;
+
+    default:
+        console.log('Comando no válido');
+        break;
+
+}
 
 
-let base = 'a';
 // let data = '';
 // for (let i = 1; i <= 10; ++i) {
 
@@ -25,7 +46,9 @@ let base = 'a';
 //     console.log('El archivo ha sido creado');
 // });
 
-
-crearArchivo(base)
-    .then(archivo => console.log(`Archvo creado : ${ archivo }`))
-    .catch(e => console.log(e));
+//let argv2 = process.argv
+//yargs
+//console.log(argv.limite);
+//el que vamos a procesar en los dos comentarios siguientes
+// let parametro = argv[2];
+// base = parametro.split('=')[1];

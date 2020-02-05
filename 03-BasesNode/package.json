@@ -1,0 +1,18 @@
+{
+    "name": "03-basesnode",
+    "version": "1.0.0",
+    "description": "Linea de Comando",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Miguel Angel Gragera",
+    "license": "ISC",
+    "dependencies": {
+        "colors": "^1.4.0",
+        "yargs": "^15.1.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.2"
+    }
+}
