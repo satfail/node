@@ -18,7 +18,8 @@ if (process.env.NODE_ENV === 'dev') {
     urlDB = 'mongodb://localhost:27017/cafe';
 } else {
     //URl atlasMongo
-    urlDB = 'mongodb+srv://admin:3pfr89zGmy7sjX5B@cluster0-lto3y.mongodb.net/cafe'
+    //guardada en heroku como var env, para no mostrar en github
+    urlDB = process.env.MONGO_URL
 }
 
 process.env.URLDB = urlDB;
