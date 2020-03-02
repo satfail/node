@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const hbs = require('hbs');
+//Base de datos
+const mongoose = require('mongoose');
 //Para usar contenido estático
 app.use(express.static(__dirname + '/public'));
 //Express HBS engine, para no repetir código html
@@ -45,6 +47,12 @@ app.get('/data', function(req, res) {
 
 //Para heroku
 
-app.listen(8080, () => {
+app.listen(port, () => {
     console.log('Escuchando en el puerto 8080');
 });
+
+//Cuidado con este error:
+// Tenia repo en Hub para guardar todo el curso
+// Queria hacer commit desde dentro de la carpeta sin hacer init en ella a Heroku
+// Error -> Me subia toda la carpeta de los ejercicios a Heroku, error en start claramente
+// Solción LO QUE QUIERA SUBIR A HEROKU, VA CON INIT Y TODO EL PROCESO GIT
