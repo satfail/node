@@ -1,7 +1,0 @@
-"C:\Program Files\MongoDB\Server\4.2\bin\mongod.exe" --dbpath="c:\data\db" 
-
-mongoATLAS
-admin
-3pfr89zGmy7sjX5B      
-
-mongodb+srv://admin:3pfr89zGmy7sjX5B@cluster0-lto3y.mongodb.net/cafe                 
