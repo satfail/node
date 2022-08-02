@@ -10,7 +10,7 @@
     "license": "ISC",
     "dependencies": {
         "colors": "^1.4.0",
-        "yargs": "^15.1.0"
+        "yargs": "^15.4.1"
     },
     "devDependencies": {
         "nodemon": "^2.0.2"
